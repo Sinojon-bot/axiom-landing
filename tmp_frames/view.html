@@ -1,0 +1,11 @@
+﻿<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>ref</title>
+<style>body{margin:0;background:#000;display:flex;justify-content:center}
+video{width:min(420px,100vw);height:auto}</style></head>
+<body>
+<video id="v" src="ref.mp4" muted playsinline autoplay></video>
+<script>
+const v=document.getElementById('v');
+v.addEventListener('loadedmetadata',()=>{document.title='ready '+v.duration.toFixed(1)+'s '+v.videoWidth+'x'+v.videoHeight});
+</script>
+</body></html>
